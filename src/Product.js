@@ -7,7 +7,7 @@ function Product(props) {
     <>
       {props.shoes.map((data, index) => {
         return (
-          <div className="col-md-4" kye={index}>
+          <div className="col-md-4" kye={data.id}>
             <img
               src={
                 "https://codingapple1.github.io/shop/shoes" +

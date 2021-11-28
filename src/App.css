@@ -3,6 +3,17 @@
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.7);
+  transition: ease-in-out 0.15s;
+}
+
 .jumbotron {
   display: flex;
   flex-direction: column;
