@@ -9,6 +9,10 @@ function Detail(props) {
   const history = useHistory();
   //:id 루트로 들어온 걸 반영. { 사용자가 입력한 URL 파라미터들 }
   const { id } = useParams();
+  //find() 반영. 게시물의 순서가 오름차순이라던가, 내림차순 때 유용한게 쓰일 거 같음.
+  const findProduct = props.shoes.find((product) => {
+    return product.id == id;
+  });
 
   return (
     <>
