@@ -3,6 +3,18 @@
 import React from "react";
 // 최근 업데이트된 리엑트와 라우터 5버전 이상에서 사용 가능
 import { useHistory, useParams } from "react-router-dom";
+//styled-components 설치 후 꼭 import
+import styled from "styled-components";
+
+//css를 미리 입혀놓은 컴포넌트를 씀
+const 박스 = styled.div`
+  padding: 20px;
+  background-color: aqua;
+`;
+
+const 제목 = styled.h4`
+  font-size: 2rem;
+`;
 
 function Detail(props) {
   // 이전 페이지들 이용하고 싶을 때 쓰는 라우터의 훅
@@ -16,6 +28,9 @@ function Detail(props) {
 
   return (
     <>
+      <박스>
+        <제목>이렇게 쓰면 className 작명할 필요가 사라짐</제목>
+      </박스>
       <div className="Container">
         <div className="row">
           <div className="col-md-6">
@@ -25,9 +40,10 @@ function Detail(props) {
             />
           </div>
           <div className="col-md-6 mt-4">
-            <h4 className="pt-5">{props.shoes[id].title}</h4>
-            <p>{props.shoes[id].content}</p>
-            <p>{props.shoes[id].price}</p>
+            {/* find()에서 선언한 걸 넣으면 됨 */}
+            <h4 className="pt-5">{findProduct.title}</h4>
+            <p>{findProduct.content}</p>
+            <p>{findProduct.price}</p>
             <button className="btn btn-danger">주문하기</button>
             <button
               className="btn btn-danger"
